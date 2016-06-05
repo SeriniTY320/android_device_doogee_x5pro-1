@@ -28,4 +28,7 @@ cd ../..
 cd hardware/libhardware_legacy
 git apply -v ../../device/ark/benefit_m7/patches/hardware_libhardware_legacy/0001-patch-for-mtk.patch
 cd ../../
+cd vendor/aicp
+git apply -v ../../device/ark/benefit_m7/patches/vendor_aicp/0001-Add-benefit_m7.patch
+cd ../../
 echo DONE !
