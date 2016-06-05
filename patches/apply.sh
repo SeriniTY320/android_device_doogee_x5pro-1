@@ -9,6 +9,7 @@ git apply -v ../../device/ark/benefit_m7/patches/framework_base/0002-location-ad
 git apply -v ../../device/ark/benefit_m7/patches/framework_base/0003-location-style-fix.patch
 git apply -v ../../device/ark/benefit_m7/patches/framework_base/0006-add-com.mediatek-for-build.patch
 git apply -v ../../device/ark/benefit_m7/patches/framework_base/0007-Update-for-mtk.patch
+git apply -v ../../device/ark/benefit_m7/patches/framework_base/0001-Patch-for-Build.patch
 cd ../opt/telephony
 git apply -v ../../../device/ark/benefit_m7/patches/framework_opt_telephony/0001-Update-for-mtk.patch
 git apply -v ../../../device/ark/benefit_m7/patches/framework_opt_telephony/0002_mobile_data_patch_mt6753.patch
