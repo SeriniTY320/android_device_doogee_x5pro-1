@@ -2,6 +2,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
+RROPTI=false
+RR_O3=false
+RR_GRAPHITE=false
+RR_STRICT=false
+RR_KRAIT=false
+
+
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
@@ -10,11 +17,15 @@ $(call inherit-product, vendor/ark/benefit_m7/benefit_m7-vendor.mk)
 DEVICE_PACKAGE_OVERLAYS += device/ark/benefit_m7/overlay
 
 # Device uses high-density artwork where available
-PRODUCT_AAPT_CONFIG := normal xhdpi xxhdpi
-PRODUCT_AAPT_PREF_CONFIG := xxhdpi
+PRODUCT_AAPT_CONFIG := normal xhdpi
+PRODUCT_AAPT_PREF_CONFIG := xhdpi
+
+# Set default player to AwesomePlayer
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.media.use-awesome=true
 
 # Recovery allowed devices
-#TARGET_OTA_ASSERT_DEVICE := 
+TARGET_OTA_ASSERT_DEVICE :=   ARK,yk602_emmc_fdd_65u,benefit_m7
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 	LOCAL_KERNEL := device/ark/benefit_m7/prebuilt/kernel
@@ -33,7 +44,6 @@ PRODUCT_COPY_FILES += \
 	device/ark/benefit_m7/rootdir/init.aee.rc:root/init.aee.rc \
 	device/ark/benefit_m7/rootdir/init.project.rc:root/init.project.rc \
 	device/ark/benefit_m7/rootdir/init.modem.rc:root/init.modem.rc \
-	device/ark/benefit_m7/recovery/root/fstab.mt6735:root/fstab.mt6735  \
 	device/ark/benefit_m7/recovery/root/fstab.mt6735:root/fstab.mt6735  \
 	device/ark/benefit_m7/rootdir/ueventd.mt6735.rc:root/ueventd.mt6735.rc \
 	device/ark/benefit_m7/rootdir/factory_init.rc:root/factory_init.rc \
@@ -206,4 +216,6 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
 	ro.adb.secure=0 \
 	persist.service.acm.enable=0 \
 	ro.oem_unlock_supported=1 \
-	persist.sys.usb.config=mtp
+	persist.sys.usb.config=mtp \
+	cm.updater.type=plain \
+	cm.updater.uri=https://raw.githubusercontent.com/olegsvs/API_CMUpdater/cm-12.1/API
