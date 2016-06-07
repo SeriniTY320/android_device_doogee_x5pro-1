@@ -2,7 +2,7 @@
 PRODUCT_RELEASE_NAME := benefit_m7
 
 # Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+$(call inherit-product, vendor/aicp/config/common_full_phone.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/ark/benefit_m7/device_benefit_m7.mk)
