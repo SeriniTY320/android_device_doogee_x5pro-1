@@ -2,7 +2,7 @@
 PRODUCT_RELEASE_NAME := benefit_m7
 
 # Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+$(call inherit-product, vendor/eos/config/common_full_phone.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/ark/benefit_m7/device_benefit_m7.mk)
@@ -17,7 +17,7 @@ TARGET_SCREEN_WIDTH := 720
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := benefit_m7
-PRODUCT_NAME := aicp_benefit_m7
+PRODUCT_NAME := eos_benefit_m7
 PRODUCT_BRAND := ark
 PRODUCT_MODEL := benefit_m7
 PRODUCT_MANUFACTURER := ark
