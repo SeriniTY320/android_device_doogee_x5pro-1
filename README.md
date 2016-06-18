@@ -1,8 +1,9 @@
-# android_device_benefit_m7
-Device repository for ARK Benefit M7 CM12.1 6735
+Cyanogenmod device repository for DOOGEE X5 Pro
+----------------------------------------
 
-Currently broken features:
-you tell me
+Cyanogenmod version: 12.1
+
+Forked from [android_device_ark_benefit_m7](https://github.com/olegsvs/android_device_ark_benefit_m7) by olegsvs
 
 ## Thanks to:
  * SRT TEAM
