@@ -17,7 +17,7 @@ TARGET_SCREEN_WIDTH := 720
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := x5pro
 PRODUCT_NAME := cm_x5pro
-PRODUCT_BRAND := ark
+PRODUCT_BRAND := nE0sIghT
 PRODUCT_MODEL := x5pro
 PRODUCT_MANUFACTURER := doogee
 

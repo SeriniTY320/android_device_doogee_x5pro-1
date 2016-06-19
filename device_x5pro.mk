@@ -14,7 +14,7 @@ PRODUCT_AAPT_CONFIG := normal xhdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
 # Recovery allowed devices
-TARGET_OTA_ASSERT_DEVICE :=   ARK,yk602_emmc_fdd_65u,x5pro
+TARGET_OTA_ASSERT_DEVICE :=   DOOGEE,yk602_emmc_fdd_65u,x5pro
 
 # Set default player to AwesomePlayer
 PRODUCT_PROPERTY_OVERRIDES += \

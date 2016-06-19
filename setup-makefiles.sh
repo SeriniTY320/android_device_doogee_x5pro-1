@@ -1,7 +1,7 @@
 #!/bin/sh
 
-VENDOR=ark
-DEVICE=benefit_m7
+VENDOR=doogee
+DEVICE=x5pro
 OUTDIR=vendor/$VENDOR/$DEVICE
 MAKEFILE=../../../$OUTDIR/$DEVICE-vendor-blobs.mk
 
