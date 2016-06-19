@@ -38,7 +38,6 @@ TARGET_GLOBAL_CFLAGS   += -mfpu=neon -mfloat-abi=softfp
 TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
 COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
 COMMON_GLOBAL_CFLAGS += -DDISABLE_HW_ID_MATCH_CHECK
-TARGET_USERIMAGES_USE_EXT4 := true
 
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/class/android_usb/android0/f_mass_storage/lun/file
  
@@ -53,6 +52,7 @@ BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x1000000
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 0x60000000
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x326380000
 BOARD_CACHEIMAGE_PARTITION_SIZE := 0x19000000
+
 #pagesize * 64
 BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x4000000 --tags_offset 0x0e000000
@@ -253,8 +253,6 @@ BOARD_SEPOLICY_UNION := \
     install_recovery.te \
     program_binary.te \
     genfs_contexts
-
- 
 
 BOARD_SEPOLICY_UNION += \
 	adbd.te \
