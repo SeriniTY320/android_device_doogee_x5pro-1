@@ -1,8 +1,8 @@
 # include proprietary libraries and binaries
--include vendor/ark/benefit_m7/BoardConfigVendor.mk
+-include vendor/doogee/x5pro/BoardConfigVendor.mk
 
 # use these headers 
-TARGET_SPECIFIC_HEADER_PATH := device/ark/benefit_m7/include
+TARGET_SPECIFIC_HEADER_PATH := device/doogee/x5pro/include
  
 # Link against libxlog
 TARGET_LDPRELOAD += libxlog.so
@@ -79,21 +79,19 @@ TARGET_REQUIRES_SYNCHRONOUS_SETSURFACE := true
 #TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 #MTK_APPENDED_DTB_SUPPORT := yes
 #BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
-# Stock_kernel
-TARGET_PREBUILT_KERNEL := device/ark/benefit_m7/kernel
- 
+
 # prebuild kernel as fallback
-#TARGET_PREBUILT_KERNEL := device/ark/benefit_m7/prebuilt/kernel
+TARGET_PREBUILT_KERNEL := device/doogee/x5pro/prebuilt/kernel
 
 # Build an EXT4 ROM image
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_NO_FACTORYIMAGE := true
 
 # system.prop
-TARGET_SYSTEM_PROP := device/ark/benefit_m7/system.prop
+TARGET_SYSTEM_PROP := device/doogee/x5pro/system.prop
 
 # CyanogenMod Hardware Hooks
-BOARD_HARDWARE_CLASS := device/ark/benefit_m7/cmhw/
+BOARD_HARDWARE_CLASS := device/doogee/x5pro/cmhw/
 
 # WiFi
 WPA_SUPPLICANT_VERSION := VER_0_8_X
@@ -114,7 +112,7 @@ BOARD_USES_LEGACY_MTK_AV_BLOB := true
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_MTK := true
 BOARD_BLUETOOTH_DOES_NOT_USE_RFKILL := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/ark/benefit_m7/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/doogee/x5pro/bluetooth
 
 # GPS
 BOARD_GPS_LIBRARIES :=true
@@ -144,12 +142,12 @@ VANZO_FEATURE_FACTORYMODE_USE_ENGLISH := yes
 
 # EGL settings
 USE_OPENGL_RENDERER := true
-BOARD_EGL_CFG := device/ark/benefit_m7/egl.cfg
+BOARD_EGL_CFG := device/doogee/x5pro/egl.cfg
 BOARD_EGL_WORKAROUND_BUG_10194508 := true
 
 # SELinux
 BOARD_SEPOLICY_DIRS := \
-       device/ark/benefit_m7/sepolicy
+       device/doogee/x5pro/sepolicy
 
 BOARD_SEPOLICY_UNION := \
     app.te \
@@ -339,7 +337,7 @@ BLOCK_BASED_OTA := false
 
 # recovery
 #TARGET_RECOVERY_INITRC := device/ark/benefit_m7/recovery/init.mt6753.rc
-TARGET_RECOVERY_FSTAB := device/ark/benefit_m7/recovery/root/fstab.mt6753
+TARGET_RECOVERY_FSTAB := device/doogee/x5pro/recovery/root/fstab.mt6735
 TARGET_RECOVERY_LCD_BACKLIGHT_PATH := \"/sys/devices/platform/leds-mt65xx/leds/lcd-backlight/brightness\"
 
 # use power button for selections in recovery

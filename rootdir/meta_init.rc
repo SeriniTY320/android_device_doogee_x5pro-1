@@ -3,7 +3,12 @@
 # IMPORTANT: Do not create world writable files or directories.
 # This is a common source of Android security bugs.
 #
-
+import /init.environ.rc
+import init.ssd.rc
+import init.no_ssd.rc
+import init.ssd_nomuser.rc
+import init.fon.rc
+import init.aee.rc
 import init.trustonic.rc
 
 on early-init
@@ -28,7 +33,7 @@ on early-init
 on init
     sysclktz 0
 
-loglevel 1
+loglevel 5
 
 # Backward compatibility
     symlink /system/etc /etc
@@ -272,6 +277,9 @@ on post-fs-data
     chmod 0777 /dev/mt9p012
     chmod 0777 /dev/mt6516_jpeg
     chmod 0777 /dev/FM50AF
+    chmod 0777 /dev/BU6424AF
+    chmod 0777 /dev/IMX164AF
+    chmod 0777 /dev/BU6429AF
 
 
 
@@ -295,7 +303,7 @@ on post-fs-data
     chown root system /dev/sec
 
     # device info interface
-    chmod 0770 /dev/devmap
+    chmod 0440 /dev/devmap
     chown root system /dev/devmap
 
 

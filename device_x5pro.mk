@@ -5,47 +5,46 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
-$(call inherit-product, vendor/ark/benefit_m7/benefit_m7-vendor.mk)
+$(call inherit-product, vendor/doogee/x5pro/x5pro-vendor.mk)
 
-DEVICE_PACKAGE_OVERLAYS += device/ark/benefit_m7/overlay
+DEVICE_PACKAGE_OVERLAYS += device/doogee/x5pro/overlay
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal xhdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
 # Recovery allowed devices
-TARGET_OTA_ASSERT_DEVICE :=   ARK,yk602_emmc_fdd_65u,benefit_m7
+TARGET_OTA_ASSERT_DEVICE :=   ARK,yk602_emmc_fdd_65u,x5pro
 
 # Set default player to AwesomePlayer
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.media.use-awesome=true
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-	LOCAL_KERNEL := device/ark/benefit_m7/prebuilt/kernel
+	LOCAL_KERNEL := device/doogee/x5pro/prebuilt/kernel
 else
 	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
 
 # init.rc's
 PRODUCT_COPY_FILES += \
-	device/ark/benefit_m7/rootdir/init.mt6735.rc:root/init.mt6735.rc \
-	device/ark/benefit_m7/rootdir/init.ssd.rc:root/init.ssd.rc \
-	device/ark/benefit_m7/rootdir/init.xlog.rc:root/init.xlog.rc \
-	device/ark/benefit_m7/rootdir/init.rc:root/init.rc \
-	device/ark/benefit_m7/rootdir/init.mt6735.usb.rc:root/init.mt6735.usb.rc \
-	device/ark/benefit_m7/rootdir/init.recovery.mt6735.rc:root/init.recovery.mt6735.rc \
-	device/ark/benefit_m7/rootdir/init.project.rc:root/init.project.rc \
-	device/ark/benefit_m7/rootdir/init.modem.rc:root/init.modem.rc \
-	device/ark/benefit_m7/recovery/root/fstab.mt6753:root/fstab.mt6735  \
-	device/ark/benefit_m7/rootdir/ueventd.mt6735.rc:root/ueventd.mt6735.rc \
-	device/ark/benefit_m7/rootdir/factory_init.rc:root/factory_init.rc \
-	device/ark/benefit_m7/rootdir/factory_init.project.rc:root/factory_init.project.rc \
-	device/ark/benefit_m7/rootdir/meta_init.project.rc:root/meta_init.project.rc \
-	device/ark/benefit_m7/rootdir/meta_init.modem.rc:root/meta_init.modem.rc \
-	device/ark/benefit_m7/rootdir/meta_init.rc:root/meta_init.rc 
+	device/doogee/x5pro/rootdir/init.mt6735.rc:root/init.mt6735.rc \
+	device/doogee/x5pro/rootdir/init.ssd_nomuser.rc:root/init.ssd_nomuser.rc \
+	device/doogee/x5pro/rootdir/init.xlog.rc:root/init.xlog.rc \
+	device/doogee/x5pro/rootdir/init.rc:root/init.rc \
+	device/doogee/x5pro/rootdir/init.mt6735.usb.rc:root/init.mt6735.usb.rc \
+	device/doogee/x5pro/rootdir/init.project.rc:root/init.project.rc \
+	device/doogee/x5pro/rootdir/init.modem.rc:root/init.modem.rc \
+	device/doogee/x5pro/recovery/root/fstab.mt6735:root/fstab.mt6735  \
+	device/doogee/x5pro/rootdir/ueventd.rc:root/ueventd.rc \
+	device/doogee/x5pro/rootdir/factory_init.rc:root/factory_init.rc \
+	device/doogee/x5pro/rootdir/factory_init.project.rc:root/factory_init.project.rc \
+	device/doogee/x5pro/rootdir/meta_init.project.rc:root/meta_init.project.rc \
+	device/doogee/x5pro/rootdir/meta_init.modem.rc:root/meta_init.modem.rc \
+	device/doogee/x5pro/rootdir/meta_init.rc:root/meta_init.rc 
 
 # TWRP thanks to Hanuma50
-PRODUCT_COPY_FILES += device/ark/benefit_m7/recovery/twrp.fstab:recovery/root/etc/twrp.fstab
+PRODUCT_COPY_FILES += device/doogee/x5pro/recovery/twrp.fstab:recovery/root/etc/twrp.fstab
 
 
 # hardware specifics
@@ -64,7 +63,6 @@ PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.wifi.direct.xml:system/etc/permissions/android.hardware.wifi.direct.xml \
 	frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
 	frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
-	$(LOCAL_PATH)/configs/media_codecs.xml:system/etc/permissions/media_codecs.xml \
 	$(LOCAL_PATH)/configs/platform.xml:system/etc/permissions/platform.xml
 
 # CM's Snap camera
@@ -125,8 +123,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     	$(LOCAL_PATH)/configs/thermal/thermal.conf:system/etc/.tp/thermal.conf \
     	$(LOCAL_PATH)/configs/thermal/thermal.off.conf:system/etc/.tp/thermal.off.conf \
-    	$(LOCAL_PATH)/configs/thermal/.ht120.mtc:system/etc/.tp/.ht120.mtc \
-    	$(LOCAL_PATH)/configs/thermal/.thermal_policy_00:system/etc/.tp/.thermal_policy_00
+    	$(LOCAL_PATH)/configs/thermal/.ht120.mtc:system/etc/.tp/.ht120.mtc
 
 # Charger
 PRODUCT_PACKAGES += \
@@ -173,12 +170,8 @@ PRODUCT_COPY_FILES += \
     	frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
     	frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
     	frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml \
-	$(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml \
-	$(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml
+	$(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml
 
-
-PRODUCT_COPY_FILES += \
-    	device/ark/benefit_m7/rootdir/etc/hostapd_default.conf:system/etc/hostapd/hostapd_default.conf \
 
 # limit dex2oat threads to improve thermals
 PRODUCT_PROPERTY_OVERRIDES += \
