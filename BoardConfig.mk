@@ -315,7 +315,7 @@ BOARD_SEPOLICY_UNION += \
 	cmddumper.te \
 	tunman.te 
 
-PRODUCT_PREBUILT_WEBVIEWCHROMIUM := yes
+PRODUCT_PREBUILT_WEBVIEWCHROMIUM := no
 
 # Block based ota
 # see http://review.cyanogenmod.org/#/c/78849/1/core/Makefile
