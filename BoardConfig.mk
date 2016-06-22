@@ -54,7 +54,7 @@ BOARD_CACHEIMAGE_PARTITION_SIZE := 0x19000000
 
 #pagesize * 64
 BOARD_FLASH_BLOCK_SIZE := 131072
-BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x4000000 --tags_offset 0x0e000000
+BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset $(BOARD_RAMDISK_OFFSET) --tags_offset 0x0e000000
 
 # experimental
 TARGET_REQUIRES_SYNCHRONOUS_SETSURFACE := true
