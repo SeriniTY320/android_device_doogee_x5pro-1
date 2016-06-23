@@ -224,14 +224,6 @@ system/lib/libdirect-coredump.so
 system/lib/libdpframework.so
 system/lib/libdrmmtkutil.so
 system/lib/libdrmmtkwhitelist.so
-system/lib/libem_bt_jni.so
-system/lib/libem_gpio_jni.so
-system/lib/libem_lte_jni.so
-system/lib/libem_modem_jni.so
-system/lib/libem_sensor_jni.so
-system/lib/libem_support_jni.so
-system/lib/libem_usb_jni.so
-system/lib/libem_wifi_jni.so
 system/lib/libextsys.so
 system/lib/libextsys_jni.so
 system/lib/libexttestmode.so
@@ -369,6 +361,17 @@ system/app/Bluetooth/lib/arm/libbluetooth_jni.so
 
 system/app/CalendarImporter/CalendarImporter.apk
 system/app/DrmProvider/DrmProvider.apk
+
+system/app/EngineerMode/EngineerMode.apk
+system/bin/em_svr
+system/lib/libem_bt_jni.so
+system/lib/libem_support_jni.so
+system/lib/libem_gpio_jni.so
+system/lib/libem_lte_jni.so
+system/lib/libem_modem_jni.so
+system/lib/libem_sensor_jni.so
+system/lib/libem_usb_jni.so
+system/lib/libem_wifi_jni.so
 
 system/app/MTKThermalManager/MTKThermalManager.apk
 system/bin/thermald
