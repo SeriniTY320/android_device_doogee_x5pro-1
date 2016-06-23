@@ -69,7 +69,6 @@ system/bin/terservice
 system/bin/tertestclient
 system/bin/thermal
 system/bin/thermal_manager
-system/bin/thermald
 system/bin/tiny_mkswap
 system/bin/tiny_swapoff
 system/bin/tiny_swapon
@@ -154,7 +153,6 @@ system/lib/libaal.so
 system/lib/libacdk.so
 system/lib/libadpcm.so
 system/lib/libaed.so
-system/lib/libatciserv_jni.so
 system/lib/libatvctrlservice.so
 system/lib/libaudiocompensationfilter.so
 system/lib/libaudiocomponentengine.so
@@ -349,3 +347,41 @@ system/vendor/lib/mediadrm/libmockdrmcryptoplugin.so
 system/vendor/lib/mediadrm/libwvdrmengine.so
 system/xbin/BGW
 system/xbin/mnld
+
+# frameworks
+system/framework/com.mediatek.effect.jar
+system/etc/permissions/com.mediatek.effect.xml
+
+system/framework/mediatek-common.jar
+system/framework/mediatek-framework.jar
+system/framework/mediatek-telephony-common.jar
+system/framework/mediatek-res/mediatek-res.apk
+
+# apps
+system/app/AtciService/AtciService.apk
+system/lib/libatciserv_jni.so
+
+system/app/AutoDialer/AutoDialer.apk
+system/app/BSPTelephonyDevTool/BSPTelephonyDevTool.apk
+system/app/BatteryWarning/BatteryWarning.apk
+
+system/app/Bluetooth/Bluetooth.apk
+system/app/Bluetooth/lib/arm/libbluetooth_jni.so
+
+system/app/CalendarImporter/CalendarImporter.apk
+system/app/DrmProvider/DrmProvider.apk
+
+system/app/MTKThermalManager/MTKThermalManager.apk
+system/bin/thermald
+
+system/app/Omacp/Omacp.apk
+system/app/SchedulePowerOnOff/SchedulePowerOnOff.apk
+
+system/app/SmartcardService/SmartcardService.apk
+system/etc/permissions/org.simalliance.openmobileapi.xml
+system/framework/org.simalliance.openmobileapi.jar
+
+system/app/YGPS/YGPS.apk
+
+
+system/priv-app/Stk1/Stk1.apk
