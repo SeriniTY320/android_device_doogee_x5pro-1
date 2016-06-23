@@ -238,6 +238,7 @@ system/lib/libfmmt6630.so
 system/lib/libged.so
 system/lib/libgifEncoder_jni.so
 system/lib/libgpu_aux.so
+system/lib/libgralloc_extra.so
 system/lib/libgraphite2.so
 system/lib/libgui_ext.so
 system/lib/libh264enc_sa.ca7.so
