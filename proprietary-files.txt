@@ -356,10 +356,7 @@ system/lib/libatciserv_jni.so
 system/app/AutoDialer/AutoDialer.apk
 system/app/BSPTelephonyDevTool/BSPTelephonyDevTool.apk
 system/app/BatteryWarning/BatteryWarning.apk
-
 system/app/Bluetooth/Bluetooth.apk
-system/app/Bluetooth/lib/arm/libbluetooth_jni.so
-
 system/app/CalendarImporter/CalendarImporter.apk
 system/app/DrmProvider/DrmProvider.apk
 
@@ -387,7 +384,6 @@ system/framework/org.simalliance.openmobileapi.jar
 system/app/YGPS/YGPS.apk
 
 system/priv-app/FmRadio/FmRadio.apk
-system/priv-app/FmRadio/lib/arm/libfmjni.so
 system/lib/libfmjni.so
 
 system/priv-app/Stk1/Stk1.apk
