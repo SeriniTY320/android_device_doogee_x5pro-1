@@ -65,10 +65,6 @@ PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
 	$(LOCAL_PATH)/configs/platform.xml:system/etc/permissions/platform.xml
 
-# CM's Snap camera
-PRODUCT_PACKAGES += \
-	Snap
-
 # MTK's Engineer Mode
 PRODUCT_PACKAGES += \
         EngineerMode
