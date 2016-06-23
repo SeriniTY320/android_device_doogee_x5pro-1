@@ -239,7 +239,6 @@ system/lib/libfeatureio.so
 system/lib/libfeatureiodrv.so
 system/lib/libfile_op.so
 system/lib/libfmcust.so
-system/lib/libfmjni.so
 system/lib/libfmmt6620.so
 system/lib/libfmmt6627.so
 system/lib/libfmmt6628.so
@@ -383,5 +382,8 @@ system/framework/org.simalliance.openmobileapi.jar
 
 system/app/YGPS/YGPS.apk
 
+system/priv-app/FmRadio/FmRadio.apk
+system/priv-app/FmRadio/lib/arm/libfmjni.so
+system/lib/libfmjni.so
 
 system/priv-app/Stk1/Stk1.apk
