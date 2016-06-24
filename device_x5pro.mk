@@ -42,8 +42,7 @@ PRODUCT_COPY_FILES += \
 	device/doogee/x5pro/rootdir/meta_init.rc:root/meta_init.rc 
 
 # TWRP thanks to Hanuma50
-PRODUCT_COPY_FILES += device/doogee/x5pro/recovery/twrp.fstab:recovery/root/etc/twrp.fstab
-
+# PRODUCT_COPY_FILES += device/doogee/x5pro/recovery/twrp.fstab:recovery/root/etc/twrp.fstab
 
 # hardware specifics
 PRODUCT_COPY_FILES += \
