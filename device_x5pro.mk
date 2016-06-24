@@ -62,17 +62,9 @@ PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
 	$(LOCAL_PATH)/configs/platform.xml:system/etc/permissions/platform.xml
 
-# MTK's Engineer Mode
-PRODUCT_PACKAGES += \
-        EngineerMode
-
 # MTK's XLog needed for Engineer Mode
 PRODUCT_PACKAGES += \
  	libxlog
-
-# Gralloc
-PRODUCT_PACKAGES += \
-   	libgralloc_extra
 
 # Bluetooth
 PRODUCT_PACKAGES += \
@@ -90,7 +82,7 @@ PRODUCT_PACKAGES += \
     	wpa_supplicant \
     	wpa_supplicant.conf \
 	libnl_2
-   	
+
 # Audio
 PRODUCT_PACKAGES += \
     	audio.a2dp.default \
@@ -147,16 +139,6 @@ PRODUCT_PACKAGES += \
 # GPS
 PRODUCT_COPY_FILES += \
      	$(LOCAL_PATH)/configs/agps_profiles_conf2.xml:system/etc/agps_profiles_conf2.xml 
-
-# FM Radio
-PRODUCT_PACKAGES += \
-     	FmRadio \
-     	libfmjni \
-	libfmmt6620 \
-        libfmmt6628 \
-        libfmmt6627 \
-        libfmmt6630 \
-        libfmcust 
 
 # Media	
 PRODUCT_COPY_FILES += \
