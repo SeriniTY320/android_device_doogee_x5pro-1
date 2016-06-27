@@ -82,7 +82,7 @@ system/bin/terservice
 system/bin/tertestclient
 system/bin/thermal
 system/bin/thermal_manager
-system/bin/tiny_fallocat
+system/bin/tiny_fallocate
 system/bin/tiny_mkswap
 system/bin/tiny_swapoff
 system/bin/tiny_swapon
