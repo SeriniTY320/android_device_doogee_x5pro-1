@@ -1,4 +1,3 @@
-system/etc/firmware/S_ANDRO_SFL.ini
 system/bin/6620_launcher
 system/bin/6620_wmt_concurrency
 system/bin/6620_wmt_lpbk
@@ -14,6 +13,7 @@ system/bin/audiocmdservice_atci
 system/bin/autokd
 system/bin/badblocks
 system/bin/bmm050d
+system/bin/boot_logo_updater
 system/bin/btconfig
 system/bin/btlogmask
 system/bin/ccci_fsd
@@ -21,10 +21,17 @@ system/bin/ccci_mdinit
 system/bin/dhcp6c
 system/bin/dhcp6ctl
 system/bin/dhcp6s
+system/bin/dm_agent_binder
+system/bin/dmlog
+system/bin/dualmdlogger
+system/bin/emdlogger1
+system/bin/epdg_wod
+system/bin/factory
 system/bin/fsck_msdos_mtk
 system/bin/geomagneticd
 system/bin/gsm0710muxd
 system/bin/gsm0710muxdmd2
+system/bin/guiext-server
 system/bin/hostapd
 system/bin/hostapd_cli
 system/bin/kpoc_charger
@@ -35,11 +42,13 @@ system/bin/make_ext4fs
 system/bin/matv
 system/bin/mc6420d
 system/bin/md_ctrl
+system/bin/mdlogger
 system/bin/memorydumper
 system/bin/memsicd
 system/bin/memsicd3416x
 system/bin/meta_tst
 system/bin/mfv_ut
+system/bin/mobile_log_d
 system/bin/msensord
 system/bin/mtk_agpsd
 system/bin/mtk_setprop
@@ -50,6 +59,7 @@ system/bin/muxreport
 system/bin/netcfg
 system/bin/netdiag
 system/bin/nvram_agent_binder
+system/bin/nvram_backup_binder
 system/bin/nvram_daemon
 system/bin/orientationd
 system/bin/perf_native_test
@@ -65,10 +75,14 @@ system/bin/radvd
 system/bin/rtt
 system/bin/run-as
 system/bin/s62xd
+system/bin/sn
+system/bin/stkgesd
+system/bin/superumount
 system/bin/terservice
 system/bin/tertestclient
 system/bin/thermal
 system/bin/thermal_manager
+system/bin/tiny_fallocat
 system/bin/tiny_mkswap
 system/bin/tiny_swapoff
 system/bin/tiny_swapon
@@ -117,6 +131,7 @@ system/lib/egl/egl.cfg
 system/lib/egl/libGLES_mali.so
 system/lib/hw/audio.primary.mt6735m.so
 system/lib/hw/camera.mt6735m.so
+system/lib/hw/consumerir.mt6735m.so
 system/lib/hw/gps.default.so
 system/lib/hw/gralloc.mt6735m.so
 system/lib/hw/hwcomposer.mt6735m.so
@@ -281,6 +296,8 @@ system/lib/libmtkbtextspp.so
 system/lib/libmtkjpeg.so
 system/lib/libmtklimiter.so
 system/lib/libmtkshifter.so
+system/lib/libmtksqlite3_android.so
+system/lib/libmtksqlite3_custom.so
 system/lib/libnativecheck-jni.so
 system/lib/libnetutils.so
 system/lib/libnfc_ndef.so
@@ -355,7 +372,10 @@ system/lib/libatciserv_jni.so
 
 system/app/AutoDialer/AutoDialer.apk
 system/app/BSPTelephonyDevTool/BSPTelephonyDevTool.apk
+
 system/app/BatteryWarning/BatteryWarning.apk
+system/bin/batterywarning
+
 system/app/Bluetooth/Bluetooth.apk
 system/app/CalendarImporter/CalendarImporter.apk
 system/app/DrmProvider/DrmProvider.apk
@@ -385,5 +405,3 @@ system/app/YGPS/YGPS.apk
 
 system/priv-app/FmRadio/FmRadio.apk
 system/lib/libfmjni.so
-
-system/priv-app/Stk1/Stk1.apk
