@@ -3,15 +3,24 @@ system/bin/6620_wmt_concurrency
 system/bin/6620_wmt_lpbk
 system/bin/AcdApiDaemon
 system/bin/MtkCodecService
+system/bin/aee
+system/bin/aee_archive
+system/bin/aee_core_forwarder
+system/bin/aee_dumpstate
 system/bin/akmd09911
 system/bin/akmd8963
 system/bin/akmd8975
 system/bin/ami304d
+
 system/bin/atci_service
 system/bin/atcid
+system/lib/libwifitest.so
+
 system/bin/audiocmdservice_atci
 system/bin/autokd
 system/bin/badblocks
+system/bin/bmc156d
+system/bin/bmx056d
 system/bin/bmm050d
 system/bin/boot_logo_updater
 system/bin/btconfig
@@ -88,7 +97,11 @@ system/bin/tiny_swapoff
 system/bin/tiny_swapon
 system/bin/wifi2agps
 system/bin/wmt_loader
+
 system/bin/xlog
+system/etc/xlog-filter-default
+system/etc/xlog-filter-tags
+
 system/etc/bluetooth/auto_pair_blacklist.conf
 system/etc/bluetooth/auto_pair_devlist.conf
 system/etc/bluetooth/bt_did.conf
@@ -117,6 +130,7 @@ system/etc/firmware/mt6627/mt6627_fm_v4_patch.bin
 system/etc/firmware/mt6627/mt6627_fm_v5_coeff.bin
 system/etc/firmware/mt6627/mt6627_fm_v5_patch.bin
 system/etc/fmr/mt6627_fm_cust.cfg
+system/etc/iAmCdRom.iso
 system/etc/mddb/BPLGUInfoCustomAppSrcP_MT6735_S00_MOLY_LR9_W1444_MD_LWTG_MP_V8_P39_1_lwg_n
 system/etc/mddb/DbgInfo_LR9.W1444.MD.LWTG.MP_HCT6735M_65C_L_MOLY_LR9_W1444_MD_LWTG_MP_V8_P39_2016_03_16_16_57_1_lwg_n
 system/etc/mtk_omx_core.cfg
@@ -146,6 +160,7 @@ system/lib/libHEVCdec_sa.ca7.android.so
 system/lib/libJniAtvService.so
 system/lib/libJpgDecPipe.so
 system/lib/libJpgEncPipe.so
+system/lib/libMiraVision_jni.so
 system/lib/libMtkOmxAdpcmDec.so
 system/lib/libMtkOmxAdpcmEnc.so
 system/lib/libMtkOmxAlacDec.so
@@ -230,15 +245,25 @@ system/lib/libcameracustom.so
 system/lib/libcameraservice.so
 system/lib/libccci_util.so
 system/lib/libcurl.so
-system/lib/libcustom_jni.so
-system/lib/libcustom_nvram.so
-system/lib/libcustom_prop.so
 system/lib/libcvsd_mtk.so
 system/lib/libdcfdecoderjni.so
 system/lib/libdirect-coredump.so
 system/lib/libdpframework.so
 system/lib/libdrmmtkutil.so
 system/lib/libdrmmtkwhitelist.so
+system/lib/libextadvanced_jni.so
+system/lib/libextbip.so
+system/lib/libextbip_jni.so
+system/lib/libextbpp.so
+system/lib/libextbpp_jni.so
+system/lib/libextdun_jni.so
+system/lib/libextem.so
+system/lib/libextftp.so
+system/lib/libextftp_jni.so
+system/lib/libextmap.so
+system/lib/libextmap_jni.so
+system/lib/libextsimap.so
+system/lib/libextsimap_jni.so
 system/lib/libextsys.so
 system/lib/libextsys_jni.so
 system/lib/libexttestmode.so
@@ -262,7 +287,9 @@ system/lib/libhotknot.so
 system/lib/libhotknot_vendor.so
 system/lib/libhwm.so
 system/lib/libimageio.so
+system/lib/libimageio_FrmB.so
 system/lib/libimageio_plat_drv.so
+system/lib/libimageio_plat_drv_FrmB.so
 system/lib/libion.so
 system/lib/libion_mtk.so
 system/lib/libja3m.so
@@ -321,6 +348,7 @@ system/lib/libshowlogo.so
 system/lib/libspeech_enh_lib.so
 system/lib/libssladp.so
 system/lib/libstagefrighthw.so
+system/lib/libterservice
 system/lib/libtimestretch.so
 system/lib/libtinyalsa.so
 system/lib/libtinycompress.so
@@ -362,9 +390,19 @@ system/framework/com.mediatek.effect.jar
 system/etc/permissions/com.mediatek.effect.xml
 
 system/framework/mediatek-common.jar
-system/framework/mediatek-framework.jar
 system/framework/mediatek-telephony-common.jar
 system/framework/mediatek-res/mediatek-res.apk
+
+system/framework/mediatek-framework.jar
+system/etc/NumberHeadWithIDToByte
+system/etc/geocoding.db
+system/etc/perfservscntbl.txt
+system/etc/resmonwhitelist.txt
+
+system/framework/CustomPropInterface.jar
+system/lib/libcustom_jni.so
+system/lib/libcustom_nvram.so
+system/lib/libcustom_prop.so
 
 # apps
 system/app/AtciService/AtciService.apk
@@ -390,6 +428,8 @@ system/lib/libem_modem_jni.so
 system/lib/libem_sensor_jni.so
 system/lib/libem_usb_jni.so
 system/lib/libem_wifi_jni.so
+
+system/app/HctTorch/HctTorch.apk
 
 system/app/MTKThermalManager/MTKThermalManager.apk
 system/bin/thermald
