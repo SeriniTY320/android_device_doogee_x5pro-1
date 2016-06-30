@@ -59,8 +59,7 @@ PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml \
 	frameworks/native/data/etc/android.hardware.wifi.direct.xml:system/etc/permissions/android.hardware.wifi.direct.xml \
 	frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
-	frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
-	$(LOCAL_PATH)/configs/platform.xml:system/etc/permissions/platform.xml
+	frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml
 
 # MTK's XLog needed for Engineer Mode
 PRODUCT_PACKAGES += \
@@ -97,19 +96,6 @@ PRODUCT_PACKAGES += \
     	librs_jni \
 	libtinyxml
 
-# Audio profiles used to address the correct audio devices for headset, etc.
-PRODUCT_COPY_FILES += \
-    	$(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml \
-    	$(LOCAL_PATH)/configs/audio_device.xml:system/etc/audio_device.xml \
-    	$(LOCAL_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf \
-    	$(LOCAL_PATH)/configs/audio_effects.conf:system/etc/audio_effects.conf
-
-# Thermal
-PRODUCT_COPY_FILES += \
-    	$(LOCAL_PATH)/configs/thermal/thermal.conf:system/etc/.tp/thermal.conf \
-    	$(LOCAL_PATH)/configs/thermal/thermal.off.conf:system/etc/.tp/thermal.off.conf \
-    	$(LOCAL_PATH)/configs/thermal/.ht120.mtc:system/etc/.tp/.ht120.mtc
-
 # Charger
 PRODUCT_PACKAGES += \
       	charger_res_images
@@ -117,12 +103,6 @@ PRODUCT_PACKAGES += \
 # Live Display
 PRODUCT_PACKAGES += \
 	libjni_livedisplay
-
-# Telecom
-PRODUCT_COPY_FILES += \
-    	$(LOCAL_PATH)/configs/apns-conf.xml:system/etc/apns-conf.xml \
-    	$(LOCAL_PATH)/configs/ecc_list.xml:system/etc/ecc_list.xml \
-    	$(LOCAL_PATH)/configs/spn-conf.xml:system/etc/spn-conf.xml 
 
 # Torch
 PRODUCT_PACKAGES += \
@@ -136,17 +116,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     	Stk
 
-# GPS
-PRODUCT_COPY_FILES += \
-     	$(LOCAL_PATH)/configs/agps_profiles_conf2.xml:system/etc/agps_profiles_conf2.xml 
-
 # Media	
 PRODUCT_COPY_FILES += \
     	frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
     	frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
-    	frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml \
-	$(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml
-
+    	frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml
 
 # limit dex2oat threads to improve thermals
 PRODUCT_PROPERTY_OVERRIDES += \

@@ -102,6 +102,11 @@ system/bin/xlog
 system/etc/xlog-filter-default
 system/etc/xlog-filter-tags
 
+system/etc/agps_profiles_conf2.xml
+system/etc/apns-conf.xml
+system/etc/audio_device.xml
+system/etc/audio_effects.conf
+system/etc/audio_policy.conf
 system/etc/bluetooth/auto_pair_blacklist.conf
 system/etc/bluetooth/auto_pair_devlist.conf
 system/etc/bluetooth/bt_did.conf
@@ -112,6 +117,7 @@ system/etc/custom.conf
 system/etc/dhcpcd/dhcpcd-hooks/20-dns.conf
 system/etc/dhcpcd/dhcpcd-hooks/95-configured
 system/etc/dhcpcd/dhcpcd-run-hooks
+system/etc/ecc_list.xml
 system/etc/firmware/ROMv2_lm_patch_1_0_hdr.bin
 system/etc/firmware/ROMv2_lm_patch_1_1_hdr.bin
 system/etc/firmware/WIFI_RAM_CODE_6735
@@ -133,9 +139,15 @@ system/etc/fmr/mt6627_fm_cust.cfg
 system/etc/iAmCdRom.iso
 system/etc/mddb/BPLGUInfoCustomAppSrcP_MT6735_S00_MOLY_LR9_W1444_MD_LWTG_MP_V8_P39_1_lwg_n
 system/etc/mddb/DbgInfo_LR9.W1444.MD.LWTG.MP_HCT6735M_65C_L_MOLY_LR9_W1444_MD_LWTG_MP_V8_P39_2016_03_16_16_57_1_lwg_n
+system/etc/media_codecs.xml
 system/etc/mtk_omx_core.cfg
 system/etc/mtklog-config.prop
 system/etc/radvd/radvd.conf
+system/etc/permissions/platform.xml
+system/etc/spn-conf.xml
+system/etc/thermal/.ht120.mtc
+system/etc/thermal/thermal.conf
+system/etc/thermal/thermal.off.conf
 system/etc/wifi/p2p_supplicant_overlay.conf
 system/etc/wifi/wpa_supplicant.conf
 system/etc/wifi/wpa_supplicant_overlay.conf
