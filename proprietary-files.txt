@@ -348,7 +348,7 @@ system/lib/libshowlogo.so
 system/lib/libspeech_enh_lib.so
 system/lib/libssladp.so
 system/lib/libstagefrighthw.so
-system/lib/libterservice
+system/lib/libterservice.so
 system/lib/libtimestretch.so
 system/lib/libtinyalsa.so
 system/lib/libtinycompress.so
