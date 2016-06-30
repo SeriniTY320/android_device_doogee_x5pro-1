@@ -102,6 +102,9 @@ system/bin/xlog
 system/etc/xlog-filter-default
 system/etc/xlog-filter-tags
 
+system/etc/.tp/.ht120.mtc
+system/etc/.tp/thermal.conf
+system/etc/.tp/thermal.off.conf
 system/etc/agps_profiles_conf2.xml
 system/etc/apns-conf.xml
 system/etc/audio_device.xml
@@ -145,9 +148,6 @@ system/etc/mtklog-config.prop
 system/etc/radvd/radvd.conf
 system/etc/permissions/platform.xml
 system/etc/spn-conf.xml
-system/etc/thermal/.ht120.mtc
-system/etc/thermal/thermal.conf
-system/etc/thermal/thermal.off.conf
 system/etc/wifi/p2p_supplicant_overlay.conf
 system/etc/wifi/wpa_supplicant.conf
 system/etc/wifi/wpa_supplicant_overlay.conf
