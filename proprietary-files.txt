@@ -106,9 +106,7 @@ system/etc/.tp/.ht120.mtc
 system/etc/.tp/thermal.conf
 system/etc/.tp/thermal.off.conf
 system/etc/agps_profiles_conf2.xml
-system/etc/apns-conf.xml
 system/etc/audio_device.xml
-system/etc/audio_effects.conf
 system/etc/audio_policy.conf
 system/etc/bluetooth/auto_pair_blacklist.conf
 system/etc/bluetooth/auto_pair_devlist.conf
@@ -383,7 +381,6 @@ system/lib/libvp9dec_sa.ca7.so
 system/lib/mtk-ril.so
 system/lib/mtk-rilmd2.so
 system/usr/keylayout/ACCDET.kl
-system/usr/keylayout/AVRCP.kl
 system/usr/keylayout/mtk-kpd.kl
 system/vendor/lib/drm/libdrmwvmplugin.so
 system/vendor/lib/hw/audio.a2dp.blueangel.so
