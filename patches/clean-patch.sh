@@ -16,5 +16,6 @@ for i in $(find "$PATCHBASE"/* -type d); do
 	git reset -q --hard || ( echo "[ ERROR ]" && echo 1 && exit 1 )
 	git clean -qfdx || ( echo "[ ERROR ]" && echo 1 && exit 1 )
 	git am --abort
+	repo sync "$CMBASE/$PATCHTARGET" --force-sync
 	echo " [ OK ]"
 done
