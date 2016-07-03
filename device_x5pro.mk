@@ -5,6 +5,9 @@ $(call inherit-product, device/common/gps/gps_eu_supl.mk)
 
 $(call inherit-product, vendor/doogee/x5pro/x5pro-vendor.mk)
 
+# Opengapps
+GAPPS_VARIANT := nano
+
 DEVICE_PACKAGE_OVERLAYS += device/doogee/x5pro/overlay
 
 # Device uses high-density artwork where available
@@ -129,6 +132,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     	dalvik.vm.image-dex2oat-threads=4
 
 $(call inherit-product, build/target/product/full.mk)
+$(call inherit-product, vendor/google/build/opengapps-packages.mk)
 
 ADDITIONAL_DEFAULT_PROPERTIES += \
 	ro.secure=0 \
