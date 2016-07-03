@@ -306,7 +306,6 @@ BOARD_SEPOLICY_UNION += \
 	autokd.te \
 	ppp.te \
 	launchpppoe.te \
-	sbchk.te \
 	service_contexts \
 	ril-3gddaemon.te \
 	usbdongled.te \

@@ -107,9 +107,6 @@ on post-fs
     chown system system /protect_s
     chmod 0770 /protect_s
 
-    chown system system /system/bin/sbchk
-    chmod 0771 /system/bin/sbchk
-
 on post-fs-data
     chown system system /persist
     chmod 0771 /persist
@@ -1597,12 +1594,6 @@ service zpppd_gprs /system/bin/init.gprs-pppd
 #
 # add the service for call pppd(end)
 #
-
-service sbchk /system/bin/sbchk
-    class core
-    user system
-    group system
-    oneshot
 
 # Program binary service
 service program_binary /system/bin/program_binary_service
