@@ -42,7 +42,8 @@ PRODUCT_COPY_FILES += \
 	device/doogee/x5pro/rootdir/factory_init.project.rc:root/factory_init.project.rc \
 	device/doogee/x5pro/rootdir/meta_init.project.rc:root/meta_init.project.rc \
 	device/doogee/x5pro/rootdir/meta_init.modem.rc:root/meta_init.modem.rc \
-	device/doogee/x5pro/rootdir/meta_init.rc:root/meta_init.rc 
+	device/doogee/x5pro/rootdir/meta_init.rc:root/meta_init.rc \
+	device/doogee/x5pro/rootdir/enableswap.sh:root/enableswap.sh
 
 # TWRP thanks to Hanuma50
 # PRODUCT_COPY_FILES += device/doogee/x5pro/recovery/twrp.fstab:recovery/root/etc/twrp.fstab
