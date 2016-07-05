@@ -5,6 +5,11 @@ $(call inherit-product, device/common/gps/gps_eu_supl.mk)
 
 $(call inherit-product, vendor/doogee/x5pro/x5pro-vendor.mk)
 
+# Mediatek framework packages
+PRODUCT_PACKAGES += \
+	com.mediatek.effect \
+	CustomPropInterface
+
 # Opengapps
 GAPPS_VARIANT := nano
 
@@ -134,6 +139,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 $(call inherit-product, build/target/product/full.mk)
 $(call inherit-product, vendor/google/build/opengapps-packages.mk)
+
+# Mediatek stuff
+PRODUCT_BOOT_JARS := \
+	mediatek-common \
+	mediatek-framework \
+	mediatek-telephony-common
 
 ADDITIONAL_DEFAULT_PROPERTIES += \
 	ro.secure=0 \

@@ -4,6 +4,7 @@ VENDOR=doogee
 DEVICE=x5pro
 OUTDIR=vendor/$VENDOR/$DEVICE
 MAKEFILE=../../../$OUTDIR/$DEVICE-vendor-blobs.mk
+ANDROIDMK=../../../$OUTDIR/Android.mk
 
 (cat << EOF) > $MAKEFILE
 # Copyright (C) 2011 The CyanogenMod Project
@@ -28,6 +29,18 @@ EOF
 LINEEND=" \\"
 COUNT=`cat proprietary-files.txt | grep -v ^# | grep -v ^$ | wc -l | awk {'print $1'}`
 for FILE in `cat proprietary-files.txt | grep -v ^# | grep -v ^$`; do
+    COUNT=`expr $COUNT - 1`
+    if [ $COUNT = "0" ]; then
+        LINEEND=""
+    fi
+    echo "    $OUTDIR/proprietary/$FILE:$FILE$LINEEND" >> $MAKEFILE
+
+done
+
+echo 'PRODUCT_COPY_FILES += \' >> $MAKEFILE
+LINEEND=" \\"
+COUNT=`cat proprietary-deodex-files.txt | grep -v ^# | grep -v ^$ | grep -v system/framework | wc -l | awk {'print $1'}`
+for FILE in `cat proprietary-deodex-files.txt | grep -v ^# | grep -v ^$ | grep -v system/framework`; do
     COUNT=`expr $COUNT - 1`
     if [ $COUNT = "0" ]; then
         LINEEND=""
@@ -80,3 +93,43 @@ EOF
 
 USE_CAMERA_STUB := false
 EOF
+
+(cat << EOF) > $ANDROIDMK
+LOCAL_PATH := \$(call my-dir)
+
+include \$(CLEAR_VARS)
+LOCAL_MODULE := doogee_symlinks
+LOCAL_MODULE_TAGS := optional
+
+SYMLINKS := make_symlinks
+\$(SYMLINKS):
+	mkdir -p \$(PRODUCT_OUT)/system/app/Bluetooth/lib/arm \
+	         \$(PRODUCT_OUT)/system/priv-app/FmRadio/lib/arm
+	ln -sf /system/lib/libbluetooth_jni.so \
+	       \$(PRODUCT_OUT)/system/app/Bluetooth/lib/arm/libbluetooth_jni.so
+	ln -sf /system/lib/libfmjni.so \
+	       \$(PRODUCT_OUT)/system/priv-app/FmRadio/lib/arm/libfmjni.so
+
+# We need this so that the installed files could be picked up based on the
+# local module name
+ALL_MODULES.\$(LOCAL_MODULE).INSTALLED += \$(SYMLINKS)
+
+# Create the symlink when you run mm/mmm or "make <module_name>"
+\$(LOCAL_MODULE) : \$(SYMLINKS)
+EOF
+
+for FILE in `cat proprietary-deodex-files.txt | grep -v ^# | grep -v ^$ | grep system/framework`; do
+	FILENAME=$(basename $FILE)
+	MODULE_NAME="${FILENAME%.*}"
+
+	(cat << EOF) >> $ANDROIDMK
+
+include \$(CLEAR_VARS)
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE := ${MODULE_NAME}
+LOCAL_MODULE_CLASS := JAVA_LIBRARIES
+LOCAL_MODULE_PATH := \$(TARGET_OUT_JAVA_LIBRARIES)
+LOCAL_SRC_FILES := proprietary/$FILE
+include \$(BUILD_PREBUILT)
+EOF
+done

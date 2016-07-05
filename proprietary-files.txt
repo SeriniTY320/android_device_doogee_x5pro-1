@@ -395,47 +395,32 @@ system/xbin/BGW
 system/xbin/mnld
 
 # frameworks
-system/framework/com.mediatek.effect.jar
+# system/framework/com.mediatek.effect.jar
 system/etc/permissions/com.mediatek.effect.xml
 
-system/framework/mediatek-common.jar
-system/framework/mediatek-telephony-common.jar
+# system/framework/mediatek-common.jar
+# system/framework/mediatek-telephony-common.jar
 system/framework/mediatek-res/mediatek-res.apk
 
-system/framework/mediatek-framework.jar
+# system/framework/mediatek-framework.jar
 system/etc/NumberHeadWithIDToByte
 system/etc/geocoding.db
 system/etc/perfservscntbl.txt
 system/etc/resmonwhitelist.txt
 
-system/framework/CustomPropInterface.jar
+# system/framework/CustomPropInterface.jar
 system/lib/libcustom_jni.so
 system/lib/libcustom_nvram.so
 system/lib/libcustom_prop.so
 
 # apps
-system/app/AtciService/AtciService.apk
-system/app/AtciService/arm/AtciService.odex
+# system/app/AtciService/AtciService.apk
 system/lib/libatciserv_jni.so
 
-system/app/AutoDialer/AutoDialer.apk
-system/app/AutoDialer/arm/AutoDialer.odex
-system/app/BSPTelephonyDevTool/BSPTelephonyDevTool.apk
-system/app/BSPTelephonyDevTool/arm/BSPTelephonyDevTool.odex
-
-system/app/BatteryWarning/BatteryWarning.apk
-system/app/BatteryWarning/arm/BatteryWarning.odex
+# system/app/BatteryWarning/BatteryWarning.apk
 system/bin/batterywarning
 
-system/app/Bluetooth/Bluetooth.apk
-system/app/Bluetooth/arm/Bluetooth.odex
-system/app/CalendarImporter/CalendarImporter.apk
-system/app/CalendarImporter/arm/CalendarImporter.odex
-system/app/DrmProvider/DrmProvider.apk
-system/app/DrmProvider/arm/DrmProvider.odex
-
-system/app/EngineerMode/EngineerMode.apk
-system/app/EngineerMode/arm/EngineerMode.odex
+# system/app/EngineerMode/EngineerMode.apk
 system/bin/em_svr
 system/lib/libem_bt_jni.so
 system/lib/libem_support_jni.so
@@ -446,26 +431,12 @@ system/lib/libem_sensor_jni.so
 system/lib/libem_usb_jni.so
 system/lib/libem_wifi_jni.so
 
-system/app/HctTorch/HctTorch.apk
-system/app/HctTorch/arm/HctTorch.odex
-
-system/app/MTKThermalManager/MTKThermalManager.apk
-system/app/MTKThermalManager/arm/MTKThermalManager.odex
+# system/app/MTKThermalManager/MTKThermalManager.apk
 system/bin/thermald
 
-system/app/Omacp/Omacp.apk
-system/app/Omacp/arm/Omacp.odex
-system/app/SchedulePowerOnOff/SchedulePowerOnOff.apk
-system/app/SchedulePowerOnOff/arm/SchedulePowerOnOff.odex
-
-system/app/SmartcardService/SmartcardService.apk
-system/app/SmartcardService/arm/SmartcardService.odex
+# system/app/SmartcardService/SmartcardService.apk
 system/etc/permissions/org.simalliance.openmobileapi.xml
 system/framework/org.simalliance.openmobileapi.jar
 
-system/app/YGPS/YGPS.apk
-system/app/YGPS/arm/YGPS.odex
-
-system/priv-app/FmRadio/FmRadio.apk
-system/priv-app/FmRadio/arm/FmRadio.odex
+# system/priv-app/FmRadio/FmRadio.apk
 system/lib/libfmjni.so
