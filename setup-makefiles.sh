@@ -119,7 +119,8 @@ ALL_MODULES.\$(LOCAL_MODULE).INSTALLED += \$(SYMLINKS)
 EOF
 
 for FILE in `cat proprietary-deodex-files.txt | grep -v ^# | grep -v ^$ | grep system/framework`; do
-	MODULE_NAME=$(basename $FILE)
+	FILE_NAME=$(basename $FILE)
+	MODULE_NAME="${FILE_NAME%.*}"
 
 	(cat << EOF) >> $ANDROIDMK
 
@@ -128,6 +129,7 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE := ${MODULE_NAME}
 LOCAL_MODULE_CLASS := JAVA_LIBRARIES
 LOCAL_MODULE_PATH := \$(TARGET_OUT_JAVA_LIBRARIES)
+LOCAL_MODULE_SUFFIX := .jar
 LOCAL_SRC_FILES := proprietary/$FILE
 include \$(BUILD_PREBUILT)
 EOF
