@@ -119,8 +119,7 @@ ALL_MODULES.\$(LOCAL_MODULE).INSTALLED += \$(SYMLINKS)
 EOF
 
 for FILE in `cat proprietary-deodex-files.txt | grep -v ^# | grep -v ^$ | grep system/framework`; do
-	FILENAME=$(basename $FILE)
-	MODULE_NAME="${FILENAME%.*}"
+	MODULE_NAME=$(basename $FILE)
 
 	(cat << EOF) >> $ANDROIDMK
 

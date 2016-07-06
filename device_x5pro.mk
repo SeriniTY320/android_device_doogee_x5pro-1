@@ -7,8 +7,8 @@ $(call inherit-product, vendor/doogee/x5pro/x5pro-vendor.mk)
 
 # Mediatek framework packages
 PRODUCT_PACKAGES += \
-	com.mediatek.effect \
-	CustomPropInterface
+	com.mediatek.effect.jar \
+	CustomPropInterface.jar
 
 # Opengapps
 GAPPS_VARIANT := nano
@@ -141,10 +141,10 @@ $(call inherit-product, build/target/product/full.mk)
 $(call inherit-product, vendor/google/build/opengapps-packages.mk)
 
 # Mediatek stuff
-PRODUCT_BOOT_JARS := \
-	mediatek-common \
-	mediatek-framework \
-	mediatek-telephony-common
+PRODUCT_BOOT_JARS += \
+	mediatek-common.jar \
+	mediatek-framework.jar \
+	mediatek-telephony-common.jar
 
 ADDITIONAL_DEFAULT_PROPERTIES += \
 	ro.secure=0 \
