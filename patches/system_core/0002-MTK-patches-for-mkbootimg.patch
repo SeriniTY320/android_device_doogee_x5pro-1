@@ -1,4 +1,4 @@
-From 3537a2df4f26890d8f787dbeff64685049f4b545 Mon Sep 17 00:00:00 2001
+From 8f339e844c6ad5a4fb054d535e4ab8d3356b9cda Mon Sep 17 00:00:00 2001
 From: Yuri Konotopov <ykonotopov@gmail.com>
 Date: Thu, 30 Jun 2016 23:28:01 +0300
 Subject: [PATCH 2/3] MTK patches for mkbootimg
