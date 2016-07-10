@@ -59,6 +59,8 @@ else
 			fi
 
 			if [ "${DIR}" = "system/framework" ]; then
+				echo Processing Java library "${APK_NAME}"
+
 				TARGET_DIR=boot-jar-result
 				if [ ! -f boot-jar-result/"${APK_NAME}" ]; then
 					TARGET_DIR=framework-jar-with-dex
@@ -83,6 +85,9 @@ else
 			fi
 		done
 		popd
+
+		rm -r "${FRAMEWORK_TEMP_DIR}"/*
+		rmdir "${FRAMEWORK_TEMP_DIR}"
 	fi
 fi
 ./setup-makefiles.sh
